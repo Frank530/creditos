@@ -13,10 +13,10 @@ public class Director {
     }
     
     public Director(String nombre,String apellidos,int telefono,String direccion){
-        this.nombre=nombre;
-        this.apellidos=apellidos;
-        this.telefono=telefono;
-        this.direccion=direccion;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.telefono = telefono;
+        this.direccion = direccion;
     }
     
     public String getNombre(){

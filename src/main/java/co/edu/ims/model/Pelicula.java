@@ -1,5 +1,8 @@
 package co.edu.ims.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author 1061738544
  */
@@ -7,21 +10,25 @@ public class Pelicula {
     
     private String titulo;
     private int anio;
-    private Director director;
+    private List<Director> director;
+    private List<Genero> genero;
 
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, int anio, Director director) {
+    public Pelicula(String titulo, int anio, List<Director> director,List<Genero> genero) {
         this.titulo = titulo;
         this.anio = anio;
         this.director = director;
+        this.genero = genero;
     }
     
     public Pelicula(String t){
-        titulo=t;
-        anio=1;
-        director=new Director("frank","salamanca",2454,"calle 229");
+        this.titulo = t;
+        this.anio = 1;
+        this.director = new ArrayList<Director>();
+        
+        
     }
     
     public String mostrarDatos(){
@@ -37,7 +44,7 @@ public class Pelicula {
         return titulo;
     }
     
-    public Director getDirector(){
+    public List<Director> getDirector(){
         return director;
     }
 
@@ -49,7 +56,19 @@ public class Pelicula {
         this.titulo =titulo;
     }
     
-    public void setDirector(Director director){
+    public void setDirector(List<Director> director){
         this.director =director;
     }
+
+    public List<Genero> getGenero() {
+        return genero;
+    }
+
+    public void setGenero(List<Genero> genero) {
+        this.genero = genero;
+    }
+
+    
+    
+    
  }
